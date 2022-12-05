@@ -1,8 +1,25 @@
 const usdCurr =28;
-const eurCurr =32;
-
+const discount = 0.9;
 function convert(amount,curr){
-    console.log(curr*amount);
+    return amount*curr;
+
 }
-convert(500,usdCurr);
-convert(500,eurCurr);
+
+function promotion(result){
+    console.log(result*discount);
+
+}
+promotion(convert(500,usdCurr));
+
+function test(){
+    for (let index = 0; index < 5; index++) {
+        console.log(index);
+        if(index===3) return;
+    }
+    console.log('Done');
+}
+test();
+
+function doNothing(){};
+console.log(doNothing()==undefined);
+
